@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cfoco.dao.VaccineDao">
+	
+	<select id="list" parameterType="Map" resultType="Vaccine">
+		select * from t_vaccine a
+		<where>
+		<if test="begin_time!=null and begin_time!=''"> 
+		  and a.plandate &gt;= #{begin_time}
+		</if>
+		<if test="end_time!=null and end_time!=''">
+		  and a.plandate &lt;= #{end_time}
+		</if>		
+		</where>
+		order by plandate,abs(substr(a.psno,2))
+		<if test="start!=null and size!=null">
+			limit #{start},#{size}
+		</if>
+	</select>
+			
+	<select id="getTotal" parameterType="Map" resultType="Long">
+		select count(*) from t_vaccine	a
+		<where>
+		<if test="begin_time!=null and begin_time!=''"> 
+		  and a.plandate &gt;= #{begin_time}
+		</if>
+		<if test="end_time!=null and end_time!=''">
+		  and a.plandate &lt;= #{end_time}
+		</if>		
+		</where> 
+	</select>	
+	
+	<insert id="add" parameterType="Vaccine">
+		insert into t_vaccine(id,vacname,psno,planage,plandate,realdate,username) 
+		values(null,#{vacname},#{psno},#{planage},#{plandate},#{realdate},#{username})
+	</insert>
+	
+	<update id="update" parameterType="Vaccine">
+		update t_vaccine 
+		<set>
+			<if test="username!=null and username!=''">
+			  realdate=now(),username=#{username}
+			</if>
+			<if test="realdate==null and username==null">
+			  vacname=#{vacname},psno=#{psno},planage=#{planage},plandate=#{plandate},realdate=#{realdate},username=#{username}		  
+			</if>
+		</set>    
+		where id=#{id}
+	</update>
+	
+	<delete id="del" parameterType="Integer">
+	    delete from t_vaccine where id=#{vacid}
+	</delete>
+		
+</mapper> 

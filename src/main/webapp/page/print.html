@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>报表打印</title>
+    
+<script type="text/javascript" src="../static/jquery-easyui-1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="../static/jquery-easyui-1.5.1/jquery.easyui.min.js"></script>
+    <style type="text/css">
+        body {
+            background: white;
+            margin: 0px;
+            padding: 0px;
+            font-size: 13px;
+            text-align: left;
+        }
+ 
+        .pb {
+            font-size: 13px;
+            border-collapse: collapse;
+        }
+ 
+            .pb th {
+                font-weight: bold;
+                text-align: center;
+                border: 1px solid #333333;
+                padding: 2px;
+            }
+ 
+            .pb td {
+                border: 1px solid #333333;
+                padding: 2px;
+            }
+    </style>
+    
+    <script type="text/javascript">
+    
+	    $(function(){
+	    	var beforePrint = function() {
+	            console.log("beforePrint");
+	            //alert(1);
+	        };
+	        bool=0;
+	    	var afterPrint = function() {
+	    	   console.log("afterPrint");
+	           //alert(2);	           
+	           bool=bool+1;
+	           console.log(bool)
+	           if(bool>=2){
+	              window.opener.getprintresult("true");
+	           }else{
+	        	  window.opener.getprintresult("false");
+	           }
+	    	};
+	     
+	    	if (window.matchMedia) {
+	    	   var mediaQueryList = window.matchMedia('print');
+	    	   mediaQueryList.addListener(function(mql) {
+	    	       if (mql.matches) {
+	    	            beforePrint();
+	    	       } else {
+	    	            afterPrint();
+	    	            //window.close();
+	    	       }
+	    	   });
+	    	 }
+	     
+	    	window.onbeforeprint = beforePrint;
+	    	window.onafterprint = afterPrint;
+	    });
+	    
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        document.write(window.opener.a);
+        window.print();
+        //window.close();
+    </script>
+</body>
+</html>

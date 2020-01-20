@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cfoco.dao.PigstyflowDao">
+
+	<resultMap type="Pigstyflow" id="PigstyflowResult">
+		<result property="flowid" column="flowid"/>
+		<result property="psno" column="psno"/>
+		<result property="create_time" column="create_time"/>
+		<result property="typeno" column="typeno"/>
+		<result property="flowdirect" column="flowdirect"/>	
+		<result property="amount" column="amount"/>
+		<result property="stock" column="stock"/>	
+		<result property="username" column="username"/>
+		<result property="if_check" column="if_check"/>		
+		<result property="psname" column="psname"/>
+		<result property="brename" column="brename"/>	
+		<result property="typename" column="typename"/>
+		
+	</resultMap>	
+		
+	<select id="list" parameterType="Map" resultType="Pigstyflow">
+		select flowid,a.psno,b.psname,a.create_time,a.typeno,d.typename,a.flowdirect,a.batno,a.days,amount,stock,a.username,c.brename,if_check
+		from t_pigsty_flow a 
+		join t_pigsty b on a.psno=b.psno
+		join t_breeder c on a.username=c.username
+		join t_flowtype d on a.typeno=d.typeno
+		where a.create_time>date_sub(curdate(),interval 12 month)
+		  <if test="is_bat!=null">
+		    and a.is_bat=#{is_bat}
+		  </if> 
+		  <if test="psno!=null and psno!=''">
+		    and a.psno=#{psno}
+		  </if>	
+		  <if test="typeno!=null and typeno!=''">
+		    and a.typeno=#{typeno}
+		  </if>	
+		  <if test="if_check!=null and if_check!=''">
+		    and a.if_check=#{if_check}
+		  </if>	
+		  
+		order by a.flowid desc 
+		<if test="start!=null and size!=null"> 
+			limit #{start},#{size}
+		</if>
+	</select>
+			
+	<select id="getTotal" parameterType="Map" resultType="Long">
+		select count(*) from t_pigsty_flow a
+		where a.create_time>date_sub(curdate(),interval 12 month)
+		 <if test="is_bat!=null">
+		    and a.is_bat=#{is_bat}
+		  </if>
+		  <if test="psno!=null and psno!=''">
+		    and psno=#{psno}
+		  </if>	
+		  <if test="typeno!=null and typeno!=''">
+		    and typeno=#{typeno}
+		  </if>	
+		  <if test="if_check!=null and if_check!=''">
+		    and if_check=#{if_check}
+		  </if>		 
+	</select>	
+	
+	<insert id="insert" parameterType="Pigstyflow">
+	    insert into t_pigsty_flow
+	    values(#{flowid},#{psno},now(),#{typeno},#{flowdirect},#{batno},#{days},#{amount},#{stock},#{username},#{if_check},#{is_bat})
+	</insert>
+	
+	<insert id="insertbat" parameterType="List">
+	    insert into t_pigsty_flow
+	    values
+	    <foreach collection="list" item="item" index="index" separator=","  >
+          (#{item.flowid},#{item.psno},now(),#{item.typeno},#{item.flowdirect},#{item.batno},#{item.days},#{item.amount},#{item.stock},#{item.username},#{item.if_check},#{item.is_bat})
+        </foreach>	    
+	</insert>
+	
+	<update id="update" parameterType="Pigstyflow">
+	    update t_pigsty_flow
+	    <set>
+	    <if test="if_check=='N'.toString() or (if_check=='Y'.toString() and is_bat==1)">
+	      <if test="days!=null and days!=''">
+	      days=#{days},
+	      </if>
+	      <if test="batno!=null and batno!=''">
+	      batno=#{batno},
+	      </if>
+	      create_time=#{create_time},psno=#{psno},typeno=#{typeno},amount=#{amount},flowdirect=#{flowdirect},stock=#{stock},username=#{username},is_bat=#{is_bat}
+	    </if>
+	    <if test="if_check=='Y'.toString() and is_bat==0">
+	      if_check=#{if_check},
+	    </if>
+	    </set> 
+	    where flowid=#{flowid}
+	</update>
+	
+	<select id="findflowid" parameterType="String" resultType="Pigstyflow">
+	  select * from t_pigsty_flow where flowid=#{flowid}
+	</select>
+	
+	<select id="findpsno" parameterType="Map" resultType="Integer">
+	  select count(1) from t_pigsty_flow 
+	  where psno=#{psno} and if_check='N' 
+	  <if test="flowid!=null and flowid!=''"> and flowid!=#{flowid}</if> 
+	</select>
+	
+	<select id="flowlist" parameterType="Map" resultType="Pigstyflow">
+	    <!-- select d.tuname,a.psno,b.psname,a.typeno,c.typename,sum(case when a.flowdirect='-' then -amount else amount end ) as amount
+		from t_pigsty_flow a 
+		left join t_pigsty b on a.psno=b.psno
+		left join t_flowtype c on a.typeno=c.typeno
+		left join t_tung d on b.tuno=d.tuno
+		where a.if_check='Y' -->
+		select * from (
+		select (case when tuname is null then '总计' else tuname end) as tuname
+		,(case when psno is null and tuname is not null then '小计' else psno end) as psno
+		,typeno
+		,typename
+		,amount
+		from (select 
+				d.tuname
+				,a.psno
+				,a.typeno
+				,c.typename
+				,sum(case when a.flowdirect='-' then -amount else amount end ) as amount
+				from t_pigsty_flow a 
+				left join t_pigsty b on a.psno=b.psno
+				left join t_flowtype c on a.typeno=c.typeno
+				left join t_tung d on b.tuno=d.tuno
+				where a.if_check='Y'
+				<if test="begin_time!=null and begin_time!=''"> 
+				  and a.create_time &gt;= #{begin_time}
+				</if>
+				<if test="end_time!=null and end_time!=''">
+				  and a.create_time &lt;= #{end_time}
+				</if>
+				<if test="typeno!=null and typeno!=''"> 
+				  and a.typeno=#{typeno}
+				</if>
+				<if test="tuno!=null and tuno!=''"> 
+				  and b.tuno=#{tuno}
+				</if>
+				<if test="psno!=null and psno!=''"> 
+				  and a.psno=#{psno}
+				</if>
+				<if test="begin_time==null and end_time==null">
+				  and date_format(create_time,'%y%m')=date_format(curdate(),'%y%m')
+				</if>					
+				group by d.tuname,a.psno,a.typeno,c.typename					
+				with rollup
+				) t
+		where not(typename is null and typeno is not null)
+		) t
+		where (tuname='总计' or psno='小计')
+		or (psno like 'F%' and typeno is not null)
+		order by 1,2,3		
+		<if test="start!=null and size!=null">
+						limit #{start},#{size}
+		</if>
+		
+	</select>
+	
+	<select id="flowcount" parameterType="Map" resultType="Long">
+		select count(1) from (
+		select (case when tuname is null then '总计' else tuname end) as tuname
+		,(case when psno is null and tuname is not null then '小计' else psno end) as psno
+		,typeno
+		,typename
+		,amount
+		from (select 
+				d.tuname
+				,a.psno
+				,a.typeno
+				,c.typename
+				,sum(case when a.flowdirect='-' then -amount else amount end ) as amount
+				from t_pigsty_flow a 
+				left join t_pigsty b on a.psno=b.psno
+				left join t_flowtype c on a.typeno=c.typeno
+				left join t_tung d on b.tuno=d.tuno
+				where a.if_check='Y'
+				<if test="begin_time!=null and begin_time!=''"> 
+				  and a.create_time &gt;= #{begin_time}
+				</if>
+				<if test="end_time!=null and end_time!=''">
+				  and a.create_time &lt;= #{end_time}
+				</if>
+				<if test="typeno!=null and typeno!=''"> 
+				  and a.typeno=#{typeno}
+				</if>
+				<if test="tuno!=null and tuno!=''"> 
+				  and b.tuno=#{tuno}
+				</if>
+				<if test="psno!=null and psno!=''"> 
+				  and a.psno=#{psno}
+				</if>
+				<if test="begin_time==null and end_time==null">
+				  and date_format(create_time,'%y%m')=date_format(curdate(),'%y%m')
+				</if>					
+				group by d.tuname,a.psno,a.typeno,c.typename					
+				with rollup
+				) t
+		where not(typename is null and typeno is not null)
+		) t
+		where (tuname='总计' or psno='小计')
+		or (psno like 'F%' and typeno is not null)
+	</select>
+	
+	<select id="flowbypsno" parameterType="Map" resultType="Pigstyflow">
+		select b.psname,sum(case when a.flowdirect='+' then amount end ) as inamount,sum(case when a.flowdirect='-' then -amount end ) as outamount
+		from t_pigsty_flow a 
+		left join t_pigsty b on a.psno=b.psno
+		left join t_flowtype c on a.typeno=c.typeno
+		where a.if_check='Y'
+		<if test="begin_time!=null and begin_time!=''"> 
+		  and a.create_time &gt;= #{begin_time} 
+		</if>
+		<if test="end_time!=null and end_time!=''">
+		  and a.create_time &lt;= #{end_time}
+		</if>
+		<if test="begin_time==null and end_time==null">
+		  and date_format(create_time,'%y%m')=date_format(curdate(),'%y%m')
+		</if>
+		group by b.psname
+	</select>
+	
+	<select id="listbat" parameterType="Map" resultType="Pigstyflow">
+		select a.flowid,a.psno,b.psname,a.create_time,a.typeno,d.typename,a.flowdirect,a.batno,a.days,amount,stock,a.username,c.brename,if_check
+		from t_pigsty_flow a 
+		join t_pigsty b on a.psno=b.psno
+		join t_breeder c on a.username=c.username
+		join t_flowtype d on a.typeno=d.typeno
+		<where>
+		<if test="is_bat!=null and is_bat!=''">
+		   and a.is_bat=#{is_bat}
+		</if>
+		<if test="tuno!=null and tuno!=''">
+		   and b.tuno=#{tuno}
+		</if>
+		<if test="typeno!=null and typeno!=''">
+		   and a.typeno=#{typeno}
+		</if>
+		<if test="begin_time!=null and begin_time!=''"> 
+		  and a.create_time &gt;= #{begin_time} 
+		</if>
+		<if test="end_time!=null and end_time!=''">
+		  and a.create_time &lt;= #{end_time}
+		</if>			
+		<if test="flowids!=null and flowids!=''">
+		  and a.flowid in
+          <foreach item="flowid" collection="flowids.split(',')" open="(" separator="," close=")">
+            #{flowid}
+          </foreach>
+		</if>  
+		</where>
+		order by substr(a.flowid,1,8),typeno,abs(substr(a.psno,2))
+	</select> 
+	
+	<delete id="delete" parameterType="String">
+	  delete from t_pigsty_flow where flowid=#{flowid}
+	</delete>
+	
+	<select id="listdays" parameterType="String" resultType="Pigstyflow">
+		select a.*
+		from t_pigsty_flow a
+		<where>				
+		<if test="flowids!=null and flowids!=''">
+		  and a.flowid in
+          <foreach item="flowid" collection="flowids.split(',')" open="(" separator="," close=")">
+            #{flowid}
+          </foreach>
+		</if>  
+		</where>
+		order by a.create_time,typeno,abs(substr(a.psno,2))
+	</select> 
+</mapper> 

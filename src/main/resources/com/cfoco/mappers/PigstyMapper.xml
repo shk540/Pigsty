@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cfoco.dao.PigstyDao">
+	
+	<select id="list" parameterType="Map" resultType="Pigsty">
+		select a.*,b.tuname from t_pigsty a left join t_tung b on a.tuno=b.tuno
+		<where>
+		  <if test="psname!=null and psname!=''">
+		    and psname like #{psname}
+		  </if>	
+		   <if test="psno!=null and psno!=''">
+		    and psno=#{psno}
+		  </if>		
+		  <if test="tuno!=null and tuno!=''">
+		    and a.tuno=#{tuno}
+		  </if>  
+		</where>
+		order by abs(substr(a.psno,2)) 
+		<if test="start!=null and size!=null">
+			limit #{start},#{size}
+		</if>
+	</select>
+			
+	<select id="getTotal" parameterType="Map" resultType="Long">
+		select count(*) from t_pigsty
+		<where>
+		  <if test="psname!=null and psname!=''">
+		    and psname like #{psname}
+		  </if>
+		  <if test="psno!=null and psno!=''">
+		    and psno=#{psno}
+		  </if>		  
+		</where>
+	</select>	
+	
+	<insert id="add" parameterType="Pigsty">
+		insert into t_pigsty(psid,psno,psname,psstock,remark,tuno) 
+		values(null,#{psno},#{psname},#{psstock},#{remark},#{tuno})
+	</insert>
+	
+	<update id="update" parameterType="Pigsty">
+		update t_pigsty 
+		
+		<set> 
+		  <if test="remark!='check' or remark==null or remark==''">
+		    psname=#{psname},remark=#{remark},tuno=#{tuno},
+		  </if>		  
+		  <if test="remark=='check'">
+		    psstock=#{psstock},
+		  </if>
+		</set> 
+		where psno=#{psno}
+	</update>
+	
+	<delete id="del" parameterType="Integer">
+	    delete from t_pigsty where psid=#{psid}
+	</delete>
+	
+	<select id="findByNo" parameterType="String" resultType="Pigsty">
+	    select * from t_pigsty where psno=#{psno}
+	</select>
+	
+	<select id="findstock" parameterType="Map" resultType="Pigsty">
+	<choose>	
+	<when test="create_time!=null and create_time!=''">
+	select a.psno,a.psname,ifnull(ifnull(substring_index(b.stock,',',1),a.psstock),0) as psstock
+	from t_pigsty a
+	left join 
+	(select psno,group_concat(stock order by substr(flowid,1,8) desc,create_time desc) as stock
+	      from t_pigsty_flow	      
+		  where create_time &lt;=#{create_time}	  
+		  group by psno) b
+	on a.psno=b.psno
+	order by abs(substr(a.psno,2))
+	</when>
+	<otherwise>
+	select psno,psname,ifnull(psstock,0) as psstock from t_pigsty order by abs(substr(a.psno,2))
+	</otherwise>
+	</choose>
+	</select>
+</mapper> 

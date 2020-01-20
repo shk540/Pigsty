@@ -1,0 +1,164 @@
+错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码：11300009 数据库连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existjava.sql.SQLException: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existjava.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:404)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.fr.data.operator.DataOperator.testConnection(Unknown Source)
+	at com.fr.design.gui.i错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码：11300009 数据库连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码：11300009 数据库连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existjava.sql.SQLException: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existUnable to load library 'E:\bmp\WltRS': Native library (win32-x86-64/E:\bmp\WltRS.dll) not found in resource path ([file:/D:/Program%20Files/FineReport_10.0/.install4j/i4jruntime.jar, file:/D:/Program%20Files/FineReport_10.0/jre/lib/charsets.jar, file:/D:/com/sap/conn/jco/JCoExceptionorg/jfree/data/KeyedValuesAbstractTableDataorg/krysalis/barcode4j/output/CanvasProviderjava.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:404)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.fr.data.operator.DataOperator.testConnection(Unknown Source)
+	at com.fr.design.gui.i错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码：11300009 数据库连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码：11300009 数据库连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existjava.sql.SQLException: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码：11300009 数据库连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existjava.sql.SQLException: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码：11300009 数据库连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existjava.sql.SQLException: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码：11300009 数据库连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existjava.sql.SQLException: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码：11300009 数据库连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existjava.sql.SQLException: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existjava.lang.Exception: 数据库连接失败错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existjava.sql.SQLException: [SQLITE_ERROR] SQL error or missing database (near "=": syntax error)错误代码:11300001 数据集配置错误
+Query:
+错误代码:11300001 数据集配置错误
+java.sql.SQLException: [SQLITE_ERROR] SQL error or missing database (near "=": syntax error)错误代码:11300001 数据集配置错误
+Query:
+错误代码:11300001 数据集配置错误
+java.sql.SQLException: [SQLITE_ERROR] SQL error or missing database (near "=": syntax error)错误代码:11300001 数据集配置错误
+Query:
+错误代码:11300001 数据集配置错误
+java.sql.SQLException: [SQLITE_ERROR] SQL error or missing database (near "=": syntax error)Unable to load library 'E:\bmp\WltRS': Native library (win32-x86-64/E:\bmp\WltRS.dll) not found in resource path ([file:/D:/Program%20Files/FineReport_10.0/.install4j/i4jruntime.jar, file:/D:/Program%20Files/FineReport_10.0/jre/lib/charsets.jar, file:/D:/com/sap/conn/jco/JCoExceptionorg/jfree/chart/title/TitleAbstractTableDataorg/krysalis/barcode4j/output/CanvasProvider错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existUnable to store Trigger with name: 'cronExpressionTrigger1576243074062' and group: 'cronExpressionTrigger', because one already exists with this identification.Unable to store Trigger with name: 'cronExpressionTrigger1576243074064' and group: 'cronExpressionTrigger', because one already exists with this identification.Unable to store Trigger with name: 'cronExpressionTrigger1576243074066' and group: 'cronExpressionTrigger', because one already exists with this identification.Unable to store Trigger with name: 'cronExpressionTrigger1576243074073' and group: 'cronExpressionTrigger', because one already exists with this identification.Unable to store Trigger with name: 'cronExpressionTrigger1576243431627' and group: 'cronExpressionTrigger', because one already exists with this identification.Unable to store Trigger with name: 'cronExpressionTrigger1576243431630' and group: 'cronExpressionTrigger', because one already exists with this identification.Unable to store Trigger with name: 'cronExpressionTrigger1576243431633' and group: 'cronExpressionTrigger', because one already exists with this identification.Unable to store Trigger with name: 'cronExpressionTrigger1576243431635' and group: 'cronExpressionTrigger', because one already exists with this identification.错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existUnable to store Trigger with name: 'cronExpressionTrigger1576245084420' and group: 'cronExpressionTrigger', because one already exists with this identification.Unable to store Trigger with name: 'cronExpressionTrigger1576245084426' and group: 'cronExpressionTrigger', because one already exists with this identification.Unable to store Trigger with name: 'cronExpressionTrigger1576245280339' and group: 'cronExpressionTrigger', because one already exists with this identification.Unable to load library 'E:\bmp\WltRS': Native library (win32-x86-64/E:\bmp\WltRS.dll) not found in resource path ([file:/D:/Program%20Files/FineReport_10.0/.install4j/i4jruntime.jar, file:/D:/Program%20Files/FineReport_10.0/jre/lib/charsets.jar, file:/D:/com/sap/conn/jco/JCoExceptionorg/jfree/data/KeyedValuesAbstractTableDataorg/krysalis/barcode4j/output/CanvasProvider错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existUnable to load library 'E:\bmp\WltRS': Native library (win32-x86-64/E:\bmp\WltRS.dll) not found in resource path ([file:/D:/Program%20Files/FineReport_10.0/.install4j/i4jruntime.jar, file:/D:/Program%20Files/FineReport_10.0/jre/lib/charsets.jar, file:/D:/com/sap/conn/jco/JCoExceptionorg/jfree/chart/title/TitleAbstractTableDataorg/krysalis/barcode4j/output/CanvasProviderjava.lang.InterruptedException
+	at java.util.concurrent.FutureTask.awaitDone(FutureTask.java:404)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:204)
+	at com.fr.data.operator.DataOperator.testConnection(Unknown Source)
+	at com.fr.design.gui.i错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码：11300009 数据库连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existjava.sql.SQLException: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码：11300009 数据库连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existjava.sql.SQLException: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existcom.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null' at line 1错误代码:11300001 数据集配置错误
+Query:
+错误代码:11300001 数据集配置错误
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null' at lcom.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null' at line 1错误代码:11300001 数据集配置错误
+Query:
+错误代码:11300001 数据集配置错误
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null' at lcom.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null' at line 1错误代码:11300001 数据集配置错误
+Query:
+错误代码:11300001 数据集配置错误
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null' at lcom.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null' at line 1错误代码:11300001 数据集配置错误
+Query:
+错误代码:11300001 数据集配置错误
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'null' at lcom.fr.general.jsqlparser.JSQLParserException
+	at com.fr.general.jsqlparser.parser.CCJSqlParserUtil.parse(Unknown Source)
+	at com.fr.general.sql.SqlUtils.tryPureSqlText(Unknown Source)
+	at com.fr.design.data.tabledata.tabledatapane.DBTableDataPane.refrcom.fr.general.jsqlparser.JSQLParserException
+	at com.fr.general.jsqlparser.parser.CCJSqlParserUtil.parse(Unknown Source)
+	at com.fr.general.sql.SqlUtils.tryPureSqlText(Unknown Source)
+	at com.fr.design.data.tabledata.tabledatapane.DBTableDataPane.refrcom.fr.general.jsqlparser.JSQLParserException
+	at com.fr.general.jsqlparser.parser.CCJSqlParserUtil.parse(Unknown Source)
+	at com.fr.general.sql.SqlUtils.tryPureSqlText(Unknown Source)
+	at com.fr.design.data.tabledata.tabledatapane.DBTableDataPane.refrcom.fr.general.jsqlparser.JSQLParserException
+	at com.fr.general.jsqlparser.parser.CCJSqlParserUtil.parse(Unknown Source)
+	at com.fr.general.sql.SqlUtils.tryPureSqlText(Unknown Source)
+	at com.fr.design.data.tabledata.tabledatapane.DBTableDataPane.refrcom.fr.general.jsqlparser.JSQLParserException
+	at com.fr.general.jsqlparser.parser.CCJSqlParserUtil.parse(Unknown Source)
+	at com.fr.general.sql.SqlUtils.tryPureSqlText(Unknown Source)
+	at com.fr.design.data.tabledata.tabledatapane.DBTableDataPane.refrcom.fr.general.jsqlparser.JSQLParserException
+	at com.fr.general.jsqlparser.parser.CCJSqlParserUtil.parse(Unknown Source)
+	at com.fr.general.sql.SqlUtils.tryPureSqlText(Unknown Source)
+	at com.fr.design.data.tabledata.tabledatapane.DBTableDataPane.refr错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist     错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existcom.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'db_pigsty.tung' doesn't exist错误代码:11300001 数据集配置错误
+Query:
+错误代码:11300001 数据集配置错误
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'db_pigsty.tung' doesn't existcom.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'db_pigsty.tung' doesn't exist错误代码:11300001 数据集配置错误
+Query:
+错误代码:11300001 数据集配置错误
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'db_pigsty.tung' doesn't existcom.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'db_pigsty.tung' doesn't exist错误代码:11300001 数据集配置错误
+Query:
+错误代码:11300001 数据集配置错误
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'db_pigsty.tung' doesn't existcom.fr.general.data.TableDataException: 错误代码:11300001 数据集配置错误
+Query:
+错误代码:11300001 数据集配置错误
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'db_pigsty.tung' doesn't exist错误代码:11300003 单元格计算死循环　　出错对象:　[B4]错误代码:11300003 单元格计算死循环　　出错对象:　[B4]java.lang.NullPointerException
+	at com.fr.web.core.ReportSessionIDInfor.getReport2Show(Unknown Source)
+	at com.fr.web.core.B.ZB.G(Unknown Source)
+	at com.fr.web.core.B.ZB.actionCMD(Unknown Source)
+	at com.fr.web.core.WebActionsDispatcher.dealForActionjava.lang.NullPointerException
+	at com.fr.web.core.ReportSessionIDInfor.getReport2Show(Unknown Source)
+	at com.fr.web.core.B.ZB.G(Unknown Source)
+	at com.fr.web.core.B.ZB.actionCMD(Unknown Source)
+	at com.fr.web.core.WebActionsDispatcher.dealForAction错误的描述为: =$$$+“周”错误的描述为: =$$$+“周”错误的描述为: =$$$+“周”错误的描述为: =$$$+“周”错误的描述为: =$$$+“周”错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误的描述为: =$$$+“周”错误的描述为: =$$$+“周”错误的描述为: =$$$+“周”错误的描述为: =$$$+“周”错误的描述为: =$$$+“周”错误的描述为: =$$$+“00”错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existUnable to load library 'E:\bmp\WltRS': Native library (win32-x86-64/E:\bmp\WltRS.dll) not found in resource path ([file:/D:/Program%20Files/FineReport_10.0/.install4j/i4jruntime.jar, file:/D:/Program%20Files/FineReport_10.0/jre/lib/charsets.jar, file:/D:/com/sap/conn/jco/JCoExceptionorg/jfree/chart/title/TitleAbstractTableDataorg/krysalis/barcode4j/output/CanvasProvider错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existcom.fr.general.jsqlparser.JSQLParserException
+	at com.fr.general.jsqlparser.parser.CCJSqlParserUtil.parse(Unknown Source)
+	at com.fr.general.sql.SqlUtils.tryPureSqlText(Unknown Source)
+	at com.fr.design.data.tabledata.tabledatapane.DBTableDataPane.refrcom.fr.general.jsqlparser.JSQLParserException
+	at com.fr.general.jsqlparser.parser.CCJSqlParserUtil.parse(Unknown Source)
+	at com.fr.general.sql.SqlUtils.tryPureSqlText(Unknown Source)
+	at com.fr.design.data.tabledata.tabledatapane.DBTableDataPane.refrcom.fr.general.jsqlparser.JSQLParserException
+	at com.fr.general.jsqlparser.parser.CCJSqlParserUtil.parse(Unknown Source)
+	at com.fr.general.sql.SqlUtils.tryPureSqlText(Unknown Source)
+	at com.fr.design.data.tabledata.tabledatapane.DBTableDataPane.refrcom.fr.general.jsqlparser.JSQLParserException
+	at com.fr.general.jsqlparser.parser.CCJSqlParserUtil.parse(Unknown Source)
+	at com.fr.general.sql.SqlUtils.tryPureSqlText(Unknown Source)
+	at com.fr.design.data.tabledata.tabledatapane.DBTableDataPane.refr错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not existcom.fr.general.jsqlparser.JSQLParserException
+	at com.fr.general.jsqlparser.parser.CCJSqlParserUtil.parse(Unknown Source)
+	at com.fr.general.sql.SqlUtils.tryPureSqlText(Unknown Source)
+	at com.fr.design.data.tabledata.tabledatapane.DBTableDataPane.refrcom.fr.general.jsqlparser.JSQLParserException
+	at com.fr.general.jsqlparser.parser.CCJSqlParserUtil.parse(Unknown Source)
+	at com.fr.general.sql.SqlUtils.tryPureSqlText(Unknown Source)
+	at com.fr.design.data.tabledata.tabledatapane.DBTableDataPane.refrcom.fr.general.jsqlparser.JSQLParserException
+	at com.fr.general.jsqlparser.parser.CCJSqlParserUtil.parse(Unknown Source)
+	at com.fr.general.sql.SqlUtils.tryPureSqlText(Unknown Source)
+	at com.fr.design.data.tabledata.tabledatapane.DBTableDataPane.refrcom.fr.general.jsqlparser.JSQLParserException
+	at com.fr.general.jsqlparser.parser.CCJSqlParserUtil.parse(Unknown Source)
+	at com.fr.general.sql.SqlUtils.tryPureSqlText(Unknown Source)
+	at com.fr.design.data.tabledata.tabledatapane.DBTableDataPane.refr错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:31300012 创建数据连接失败: path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist错误代码:11300001 数据集配置错误
+Query:
+path to '//E:\java\Pigsty\src\main\webapp\WEB-INF/../help/FRDemo.db': 'E:\java\Pigsty\src\main\webapp\WEB-INF\..\help' does not exist

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cfoco.dao.FlowtypeDao">
+	
+	<select id="list" parameterType="Map" resultType="Flowtype">
+		select * from t_flowtype 		
+		<if test="typeno!=null and typeno!=''" >
+		  where typeno=#{typeno}
+		</if>
+		order by typeid 
+		<if test="start!=null and size!=null">
+			limit #{start},#{size}
+		</if>
+	</select>
+			
+	<select id="getTotal" parameterType="Map" resultType="Long">
+		select count(*) from t_flowtype		
+	</select>	
+	
+	<insert id="add" parameterType="Flowtype">
+		insert into t_flowtype(typeid,typeno,typename,flowdirect) 
+		values(null,#{typeno},#{typename},#{flowdirect})
+	</insert>
+	
+	<update id="update" parameterType="Flowtype">
+		update t_flowtype set typename=#{typename},typeno=#{typeno},flowdirect=#{flowdirect} where typeid=#{typeid}
+	</update>
+	
+	<delete id="del" parameterType="Integer">
+	    delete from t_flowtype where typeid=#{typeid}
+	</delete>
+	
+	<select id="findbyname" parameterType="String" resultType="Flowtype">
+	   select typeno,flowdirect from t_flowtype where typename=#{typename}
+	</select>
+</mapper> 

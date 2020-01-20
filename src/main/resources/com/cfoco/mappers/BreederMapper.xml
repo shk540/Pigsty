@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cfoco.dao.BreederDao">
+	
+	<select id="login" parameterType="Breeder" resultType="Breeder">
+		select * from t_breeder where username=#{username} and password=#{password}
+	</select>
+	
+	<select id="list" parameterType="Map" resultType="Breeder">
+		select * from t_breeder 
+		<where>
+		  <if test="brename!=null and brename!=''">
+		    and brename like #{brename}
+		  </if> 
+		  <if test="cardno!=null and cardno!=''">
+		    and cardno like #{cardno}
+		  </if> 
+		  <if test="if_valid!=null">
+		    and if_valid=#{if_valid}
+		  </if>
+		</where>
+		order by breid 
+		<if test="start!=null and size!=null">
+			limit #{start},#{size}
+		</if>
+	</select>
+			
+	<select id="getTotal" parameterType="Map" resultType="Long">
+		select count(*) from t_breeder
+		<where>
+		  <if test="brename!=null and brename!=''">
+		    and brename like #{brename}
+		  </if> 
+		  <if test="cardno!=null and cardno!=''">
+		    and cardno like #{cardno}
+		  </if> 
+		  <if test="if_valid!=null">
+		    and if_valid=#{if_valid}
+		  </if>
+		</where>
+	</select>	
+	
+	<insert id="add" parameterType="Breeder">
+		insert into t_breeder(breid,brename,sex,cardno,phone,is_manager,if_valid,create_time,username) 
+		values(null,#{brename},#{sex},#{cardno},#{phone},#{is_manager},#{if_valid},now(),#{username})
+	</insert>
+	
+	<update id="update" parameterType="Breeder">
+		update t_breeder 
+		<set>
+		  <if test="brename!=null and brename!=''">
+		    brename=#{brename},sex=#{sex},cardno=#{cardno},phone=#{phone},is_manager=#{is_manager},if_valid=#{if_valid},username=#{username},    
+		  </if>
+		  <if test="brename==null">
+		    password=#{password},		    
+		  </if> 		  
+		</set> 
+		where breid=#{breid}
+	</update>
+	
+	<delete id="del" parameterType="Integer">
+	    delete from t_breeder where breid=#{breid}
+	</delete>
+	
+	<select id="findByNo" parameterType="String" resultType="Breeder">
+	 	select * from t_breeder where username=#{username}
+	</select>
+</mapper> 
