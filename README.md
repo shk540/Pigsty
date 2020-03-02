@@ -2,7 +2,7 @@
 为中粮集团开发的猪舍进销管理系统。
 
 一、系统架构
-  1、后端：spring+springmvc+mybatis+easyui;
+  1、后端：spring+springmvc+mybatis+druid;
   2、前端：jquery easyui+bootstrap;
   3、数据库：mysql；
   4、集成第三方组件：finereport,echarts等。
